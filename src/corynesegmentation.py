@@ -1,9 +1,9 @@
+import proginit as pi
+
+
 def project_entry():
-    print("Hello world")
-
-import mkdocs
-
-import numpy
-
-if mkdocs:
-    print('wuhu')
+    pi.logger.info("Starting cryneSegementation program!")
+    if pi.pargs.input:
+        pi.logger.debug("Our input file is: " + pi.pargs.input)
+    else:
+        pi.logger.warn("No input file given!")
